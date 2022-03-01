@@ -1,0 +1,36 @@
+PORT = 7000
+USER = shiftbitsummuser
+PASSWORD = cantremembermypassword
+DATABASE = ebdb
+HOST = aa1ufgm43fb95fz.cfvxaovr1v1x.ap-south-1.rds.amazonaws.com
+CORE = https://test.skyeye.si:444/ExchangeOffice/
+CORE_TOKEN = TOKEN_01
+TWILIO_ACCOUNT_SID = AC88c497bb4fdb09d2eefae40ca15f4b40
+TWILIO_AUTH_TOKEN = 922619e227eb856a5229b80f6c5d8676
+FROM = +13092478387
+JWT_SECRET = fdeddba11d7706dbef93a46610724a6fa37cda1eb1d94c034f2b0a66ccd99b8f3e265572c1125e12e79a606a7e8697a10ae1c744a5c6caa7fbab505f3d708bf1
+API_TOKEN = api_sandbox.iq5gvqS8t6u.4tMW4f6I9xUKyKOSSnz3Sk8cPszoVWUZ
+ONE_SIGNAL_APP_ID = 51973569-4d51-4e6a-bc41-f03`961ce9564
+SENDGRID_API_KEY = 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
+FCM_TOKEN = BLhSH5mcOCRwkxOENDTfSdVYO5KFXIUcp2MfagRuRJ0boA3aan6C6sPGWK94uFDV-QZyxdk9kfv3u95ycOSb8LE
+TOKEN_GENERATE = https://apigwuat.kotak.com:8443/auth/oauth/v2/token
+PAYMENT_CHECK = https://apigwuat.kotak.com:8443/Ecollection
+MAKE_PAYMENT = https://apigwuat.kotak.com:8443/cms_generic_service?apikey=l7xx9e2c880d0b4549049ff62c5bf595c310
+PAYMENT_STATUS = https://apigwuat.kotak.com:8443/cms_generic_service?apikey=l7xx9e2c880d0b4549049ff62c5bf595c310
+CMS_TOKEN = grant_type=client_credentials&client_id=l7xx73fb7cf352334fc19cf8c5eaf2eff531&client_secret=e6a0f4d39afa4e4e8dfb1656ac1a6424
+REVERSAL = https://apigwuat.kotak.com:8443/cms_generic_service?apikey=l7xx9e2c880d0b4549049ff62c5bf595c310
+MSG_SOURCE = ABCCOMPANY
+CLIENT_CODE = TEMPTEST1
+TX_EMAIL = kotak@ShiftBits.io
+USER_NAME_ZEN = akash@shiftbits.io/token
+PASSWORD_ZEN = NVzV5e8XkjrG8zFEJrG3RrTR7egoHvcSKwOISbTU
+REMOTEURI = https://shiftbits8756.zendesk.com/api/v2
+USER_NAME = akash@shiftbits.io
+ZEN_PASSWORD = dontknowmypassword
+FIND_URL = https://shiftbits8756.zendesk.com/api/v2/tickets/show_many?ids=
+
+
+USER_NAME = akash@shiftbits.io
+ZEN_PASSWORD = dontknowmypassword
+FIND_URL = https://shiftbits8756.zendesk.com/api/v2/tickets/show_many?ids=
+ONFIDO=https://api.eu.onfido.com

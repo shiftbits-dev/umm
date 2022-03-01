@@ -1,0 +1,1381 @@
+{
+	"info": {
+		"_postman_id": "f40e7c74-6e86-48f8-8a03-59e3e0be71a4",
+		"name": "Shiftbits-Postgres Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text"
+					},
+					{
+						"key": "ip-Address",
+						"value": "123.11.7.8",
+						"type": "text"
+					},
+					{
+						"key": "device-Name",
+						"value": "Redmi Note 8 Pro",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"987643210\",\r\n    \"promotionalMail\": true,\r\n    \"userRole\":\"customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "For App Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device-type",
+								"value": "mobile",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"7398370621\",\r\n    \"promotionalMail\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/user/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,OPTIONS,POST,PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1dc-Zh1iOCj+cNECkHxH9U50933yIpE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 May 2021 12:28:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User Successfully Registered\",\n    \"data\": {\n        \"verifyEmail\": false,\n        \"verifyPhone\": false,\n        \"verifyIdentity\": \"false\",\n        \"id\": \"16\",\n        \"phone\": \"7398370621\",\n        \"promotionalMail\": true,\n        \"email\": null,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE2IiwicGhvbmUiOiI3Mzk4MzcwNjIxIiwiaWF0IjoxNjIxNjg2NDk1fQ.EMhj0AkyHaeKcoJPc0hYhyob4Ryb4Fz_00gJwvi7q9s\",\n        \"firstName\": null,\n        \"lastName\": null,\n        \"dob\": null,\n        \"identityType\": null,\n        \"identityPhoto\": null,\n        \"applicantId\": null\n    },\n    \"error\": \"SUCCESS\"\n}"
+				},
+				{
+					"name": "For Website Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device-type",
+								"value": "desktop",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"9911670580\",\r\n    \"email\":\"jaydeep0216@gmail.com\",\r\n    \"promotionalMail\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/user/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,OPTIONS,POST,PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "495"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ef-1mTvurwdCSMXfH7o1V11jkT6ZFE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 May 2021 12:29:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User Successfully Registered\",\n    \"data\": {\n        \"verifyEmail\": false,\n        \"verifyPhone\": false,\n        \"verifyIdentity\": \"false\",\n        \"id\": \"17\",\n        \"phone\": \"9911670580\",\n        \"email\": \"jaydeep0216@gmail.com\",\n        \"promotionalMail\": true,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3IiwicGhvbmUiOiI5OTExNjcwNTgwIiwiaWF0IjoxNjIxNjg2NTc0fQ.B9KDlaOfjpFjTL88wYXkYN7dDsrR6nB9xmBjpYWEU6I\",\n        \"firstName\": null,\n        \"lastName\": null,\n        \"dob\": null,\n        \"identityType\": null,\n        \"identityPhoto\": null,\n        \"applicantId\": null\n    },\n    \"error\": \"SUCCESS\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text"
+					},
+					{
+						"key": "device-name",
+						"value": "Redmi note 8 pro",
+						"type": "text"
+					},
+					{
+						"key": "ip-address",
+						"value": "112.6.7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"7398370621\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTP VERIFY",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "ip-address",
+						"value": "4953.58347",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "device-name",
+						"value": "redmi",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\":8602\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/verifyOtp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"verifyOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFY PHONE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\":8595\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/verifyphone",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"verifyphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PHONE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"9876541230\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/updatePhone",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"updatePhone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\",\r\n    \"dob\":\"21/06/1999\",\r\n    \"email\":\"johan.Deo@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAIL VERIFICATION",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU2IiwicGhvbmUiOiI3Mzk4MzcwNjIxIiwiaWF0IjoxNjIyMTg4NjcyfQ.LWd_DvOwif1zxzW1UsBd4lezPZQxQKsQV6WJjuB1meM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/emailVerification",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"emailVerification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFY EMAIL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\":9073\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/verifyEmail",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"verifyEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROFILE PICTURE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/hp/Pictures/Screenshot from 2021-08-16 21-26-47.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/profilePicture",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"profilePicture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BY ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/userById",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"userById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/logout",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BANK ACCOUNT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\":9878543201,\r\n    \"ifscCode\":\"PYTM0123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userBank/addBank",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userBank",
+						"addBank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BANK ACCOUNT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userBank/getBankAccount",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userBank",
+						"getBankAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BANK ACCOUNT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\":987543111,\r\n    \"ifscCode\":\"PYTM0123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userBank/updateBank",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userBank",
+						"updateBank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPLOAD IDENTITY",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "device-type",
+						"value": "mobile",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/hp/Pictures/Screenshot from 2021-08-17 00-23-02.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userKyc/uploadFile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userKyc",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDENTITY TYPE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "device_type",
+						"value": "mobile",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identityType\": \"Voter Id\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userKyc/update",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userKyc",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwicGhvbmUiOiI4ODU4MzE0MTQxIiwiZW1haWwiOm51bGwsInVzZXJSb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTYyOTEzNjcwMn0.64kWyqXpsUvMBrmad3sMAJ0XBCfRkJnAMUb81CRaRMY",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/superAdmin/allUser",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"superAdmin",
+						"allUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE KYC",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwicGhvbmUiOiI4ODU4MzE0MTQxIiwiZW1haWwiOm51bGwsInVzZXJSb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTYyOTEzNjcwMn0.64kWyqXpsUvMBrmad3sMAJ0XBCfRkJnAMUb81CRaRMY",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":6,\r\n    \"verifyIdentity\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/superAdmin/updateKyc",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"superAdmin",
+						"updateKyc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RAISE TICKET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subject\": \"My printer is on fire\",\n    \"body\": \"The smoke is very colorful.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/userRaiseRequest",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"userRaiseRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET REQUEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userDetails/getUserRequest",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						"getUserRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL RAISE TICKET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1IiwicGhvbmUiOiI4ODU4MzE0MTQxIiwiZW1haWwiOm51bGwsInVzZXJSb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTYyOTEzNjcwMn0.64kWyqXpsUvMBrmad3sMAJ0XBCfRkJnAMUb81CRaRMY",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/superAdmin/getAllRaiseTicket",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"superAdmin",
+						"getAllRaiseTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET AMOUNT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userBank/getAmount",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userBank",
+						"getAmount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "START SELL TRANSCATION",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cryptoValue\":100,\n    \"crypto\":\"btc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/exchange/startSellTransaction",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"exchange",
+						"startSellTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WITHDRAW PAYMENT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"TransactionId\":\"6fb7d442-185c-4ea4-8632-d2cfc4f41624-5844-3713\",\n  \"Status\":\"Finished\",\n  \"AmountToSend\":0.03006698,\n  \"AmountReceived\":0.0300501,\n  \"CryptoCurrency\":\"btc\",\n  \"Currency\":\"inr\",\n  \"ValueRequested\":10200,\n  \"ValueToPayout\":10123\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/payment/withdrawPayment",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"payment",
+						"withdrawPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET KYC STATUS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{{{TOKEN}}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/userKyc/getKycStatus",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userKyc",
+						"getKycStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KYC CHECK",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payload\": {\n    \"resource_type\": \"report\",\n    \"action\": \"report.completed\",\n    \"object\": {\n      \"id\": \"f0f11fa4-68d1-4570-9ca5-278e5e1c7dce\",\n      \"status\": \"complete\",\n      \"completed_at_iso8601\": \"2019-10-28T15:00:39Z\",\n      \"href\": \"https://api.onfido.com/v3/reports/05de17ab-005d-409c-8570-fda11ec99045\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/userKyc/kycCheck",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"userKyc",
+						"kycCheck"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "{{TOKEN}}",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImVtYWlsIjoiamF5ZGVlcDAyNkBnbWFpbC5jb20iLCJwaG9uZSI6IjczOTgzNzA2MjEiLCJpYXQiOjE2MjA1NjM4MTF9.sDlPtQJmYQkwGWSihhxzXKy6vMMCooXyKnvPOWNaHxo"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+  "PUSH": {
+    "TITLE": {
+      "NEW_LOGIN": "New Login",
+      "KYC_VERIFIED": "KYC Verified",
+      "KYC_NOT_DONE": "KYC Not Done",
+      "KYC_DATA_FRAUD": "KYC Data Faulty",
+      "KYC_REJECTED": "KYC Rejected",
+      "KYC_CAUTION":"KYC Caution"
+    },
+    "BODY": {
+      "NEW_LOGIN": "A New Device Has Logged in to Your Account",
+      "KYC_VERIFIED": "Congratulations! Your KYC has been verified",
+      "KYC_NOT_DONE": "Waiting! KYC Details Not Completed",
+      "KYC_DATA_FRAUD": "Faulty! Document Uploaded for KYC is Faulty",
+      "KYC_REJECTED": "Rejected! KYC Verfication got Rejected",
+      "KYC_CAUTION": "Caution! KYC Verification is Caution E.g. Document Upload got Expired"
+    }
+  }
+}

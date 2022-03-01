@@ -1,0 +1,6 @@
+{
+    "SALT": {
+        "ROUNDS": 10
+    },
+    "EMAIL_FROM": "shivam@shiftbits.io"
+}

@@ -1,0 +1,104 @@
+CREATE SEQUENCE user_userId_seq
+    INCREMENT 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    START 1
+    CACHE 1;
+
+CREATE TABLE public."user"
+(
+  "userId" integer NOT NULL DEFAULT nextval('"user_userId_seq"'::regclass),
+  phone text COLLATE pg_catalog."default" NOT NULL,
+  email text COLLATE pg_catalog."default",
+  password text COLLATE pg_catalog."default",
+  token text COLLATE pg_catalog."default",
+  "verifyEmail" boolean,
+  "verifyPhone" boolean,
+  "firstName" text COLLATE pg_catalog."default",
+  "lastName" text COLLATE pg_catalog."default",
+  dob text COLLATE pg_catalog."default",
+  otp text COLLATE pg_catalog."default",
+  "emailOtp" text COLLATE pg_catalog."default",
+  "promotionalMail" boolean,
+  "profilePicture" text COLLATE pg_catalog."default",
+  "applicantId" text COLLATE pg_catalog."default",
+  "createdAt" timestamp with time zone DEFAULT now(),
+  "updatedAt" timestamp with time zone DEFAULT now(),
+  "lastKycMailSend" timestamp with time zone DEFAULT now(),
+  "userRole" userrole,
+  CONSTRAINT user_pkey PRIMARY KEY ("userId", phone)
+)
+
+
+CREATE TABLE public.bank
+(
+  "virtualAccountNumber" text COLLATE pg_catalog."default",
+  "userId" bigint NOT NULL,
+  "updatedAt" timestamp with time zone,
+  "ifscCode" text COLLATE pg_catalog."default",
+  id bigint NOT NULL DEFAULT nextval('bank_id_seq'::regclass),
+  "createdAt" timestamp with time zone,
+  "accountNumber" bigint,
+  "balance" bigint,
+  CONSTRAINT bank_pkey PRIMARY KEY ("userId", id)
+)
+
+CREATE TABLE public.help
+(
+    id bigint NOT NULL DEFAULT nextval(public.help),
+    "userId" bigint,
+    "zendeskId" bigint,
+    url text COLLATE pg_catalog."default",
+    subject text COLLATE pg_catalog."default",
+    description text COLLATE pg_catalog."default",
+    status text COLLATE pg_catalog."default",
+    "requesterId" text COLLATE pg_catalog."default",
+    "createdAt" timestamp with time zone DEFAULT now(),
+    "updatedAt" timestamp with time zone DEFAULT now(),
+    CONSTRAINT help_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE public.kyc
+(
+  id integer NOT NULL DEFAULT nextval('kyc_id_seq'::regclass),
+  "userId" bigint NOT NULL,
+  "selfiStatus" boolean,
+  "documentStatus" boolean,
+  "applicantId" text COLLATE pg_catalog."default",
+  "resultUri" text COLLATE pg_catalog."default",
+  "identityPhoto" text COLLATE pg_catalog."default",
+  "createdAt" timestamp with time zone DEFAULT now(),
+  "updatedAt" timestamp with time zone DEFAULT now(),
+  "checkId" text COLLATE pg_catalog."default",
+  "kycStatus" text COLLATE pg_catalog."default",
+  CONSTRAINT kyc_pkey PRIMARY KEY (id, "userId")
+)
+
+CREATE TABLE public.payment
+(
+  id bigint NOT NULL DEFAULT nextval('payment_id_seq'::regclass),
+  "userId" bigint NOT NULL,
+  "modeOfPayment" text COLLATE pg_catalog."default",
+  amount bigint,
+  "paymentStatus" text COLLATE pg_catalog."default",
+  "utrNumber" text COLLATE pg_catalog."default",
+  "createdAt" timestamp with time zone NOT NULL DEFAULT now(),
+  "updatedAt" timestamp with time zone NOT NULL DEFAULT now(),
+  "messageId" text COLLATE pg_catalog."default",
+  CONSTRAINT payment_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE public.session
+(
+  id bigint NOT NULL DEFAULT nextval('session_id_seq'::regclass),
+  "userId" bigint,
+  token text COLLATE pg_catalog."default",
+  "isLogin" boolean,
+  "deviceType" text COLLATE pg_catalog."default",
+  "updatedAt" timestamp with time zone NOT NULL DEFAULT now(),
+  "createdAt" timestamp without time zone DEFAULT timezone('utc'::text, now()),
+  "playerId" text COLLATE pg_catalog."default",
+  "ipAddress" text COLLATE pg_catalog."default",
+  "deviceName" text COLLATE pg_catalog."default",
+  CONSTRAINT session_pkey PRIMARY KEY (id)
+)
